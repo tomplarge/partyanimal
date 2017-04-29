@@ -12,10 +12,10 @@ def get_data(path):
     data = data[:,1:] #exlucde time field
     return data
 
-def plot(data,data1,data2):
-    plt.plot(data,'r')
-    plt.plot(data1,'g')
-    plt.plot(data2,'b')
+def plot(data):
+    colors = ['r','g','b','p','m']
+    for i in range(data.shape[1]):
+        plt.plot(data[:,i],colors[i])
     plt.show()
 
 def plot_bokeh(data1,data2,field):
