@@ -30,21 +30,21 @@ def dist(x,y,metric='euclidean'):
 
         elif metric == 'cityblock':
             combined_distance[t] = scipy.spatial.distance.cityblock(y[t],x[t])
-            
+
             for n in range(component_distance.shape[1]):
                 component_distance[t,n] = np.abs(y[t,n]-x[t,n])
 
     return combined_distance,component_distance
-
-x = np.zeros((5,3))
-y = np.zeros((5,3))
-
-for i in range(5):
-    for j in range(3):
-        x[i,j] = i+j
-        y[i,j] = i-j
-print x,"\n",y
-combined,component = dist(x,y)
-#combined = dist(x,y,'euclidean')
-print "combined:",combined,"\n"
-print "component:",component,"\n"
+# 
+# x = np.zeros((5,3))
+# y = np.zeros((5,3))
+#
+# for i in range(5):
+#     for j in range(3):
+#         x[i,j] = i+j
+#         y[i,j] = i-j
+# print x,"\n",y
+# combined,component = dist(x,y)
+# #combined = dist(x,y,'euclidean')
+# print "combined:",combined,"\n"
+# print "component:",component,"\n"

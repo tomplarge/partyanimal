@@ -1,4 +1,4 @@
-import pandas as pd
+from pandas import read_csv
 
 
 # takes in a csv file as a string and outputs an array
