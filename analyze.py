@@ -2,7 +2,7 @@ import numpy as np
 import scipy
 import scipy.spatial
 
-def dist(x,y,metric='euclidean'):
+def dist(x,y,metric='cityblock'):
     #computes the absolute distance between two time sample multi-field data vectors
     #x: first vector (numpy array)
     #y: second vector (numpy array)
@@ -35,7 +35,7 @@ def dist(x,y,metric='euclidean'):
                 component_distance[t,n] = np.abs(y[t,n]-x[t,n])
 
     return combined_distance,component_distance
-# 
+#
 # x = np.zeros((5,3))
 # y = np.zeros((5,3))
 #
