@@ -1,3 +1,5 @@
+import os
+
 # Off timing responses
 def below10_accel():
     return "There's this thing called music, check it out sometime."
@@ -60,6 +62,7 @@ def rate_dab(orient_gyro, accel):
     else:
         response = in_depth_rate_dab(orient_gyro, accel)
     print response
+    os.system("say "+response)
     return response
 
 #### Testing these bad boys out ####
@@ -70,8 +73,3 @@ rate_dab(2,1)
 rate_dab(66,28)
 rate_dab(90,30)
 rate_dab(80,95)
-
-import pyttsx
-engine = pyttsx.init()
-engine.say('Good morning.')
-engine.runAndWait()
